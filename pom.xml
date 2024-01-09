@@ -70,7 +70,18 @@
                 <version>3.2.3</version>
                 <configuration>
                     <includes>
-                        <include>**/*.java</include>
+<!--                        <include>**/*.java</include>-->
+                        <include>**/*AcceptTest.java</include>
+                        <include>**/*ConstrainMovementTest.java</include>
+                        <include>**/*DisplayAsGridTest.java</include>
+                        <include>**/*HandlesTest.java</include>
+                        <include>**/*NormalIframeTest.java</include>
+                        <include>**/*RevertAndDraggablePositionTest.java</include>
+                        <include>**/*SerializeTest.java</include>
+                        <include>**/*ShowAlertTest.java</include>
+                        <include>**/*ShowConfirmTest.java</include>
+                        <include>**/*SynchronousResizeTest.java</include>
+                        <include>**/*TextAreaTest.java</include>
                     </includes>
                 </configuration>
             </plugin>

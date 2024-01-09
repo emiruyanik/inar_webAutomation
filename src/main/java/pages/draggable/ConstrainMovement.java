@@ -24,8 +24,9 @@ public class ConstrainMovement extends BasePage {
     public void clickAndDragFirstElement(int xOffset, int yOffset) {
         actions.clickAndHold(firstDraggableElement).dragAndDropBy(firstDraggableElement, xOffset, yOffset).release().build().perform();
     }
+
     public void clickAndDragSecondElement(int xOffset, int yOffset) {
-        actions.clickAndHold(firstDraggableElement).dragAndDropBy(firstDraggableElement, xOffset, yOffset).release().build().perform();
+        actions.clickAndHold(secondDraggableElement).dragAndDropBy(secondDraggableElement, xOffset, yOffset).release().build().perform();
     }
 
     public int firstElementOFLocationX() {
@@ -36,12 +37,36 @@ public class ConstrainMovement extends BasePage {
         return firstDraggableElement.getLocation().getY();
     }
 
-    public int SecondElementOFLocationX() {
+    public int secondElementOFLocationX() {
         return secondDraggableElement.getLocation().getX();
     }
 
-    public int SecondElementOFLocationY() {
+    public int secondElementOFLocationY() {
         return secondDraggableElement.getLocation().getY();
+    }
+
+    //for third element
+    public void clickAndDragThirdElement(int xOffset, int yOffset) {
+        actions.dragAndDropBy(thirdDraggableElement, xOffset, yOffset).build().perform();
+    }
+
+
+    public int thirdElementOFLocationX() {
+        return thirdDraggableElement.getLocation().getX();
+    }
+
+    public int thirdElementOFLocationY() {
+        return thirdDraggableElement.getLocation().getY();
+    }
+    //for fourth element
+    public int fourthElementOfLocationX(){
+        return fourthDraggableElement.getLocation().getX();
+    }
+    public int fourthElementOfLocationY(){
+        return fourthDraggableElement.getLocation().getY();
+    }
+    public void clickAndDragFourthElement(int xOffset,int yOffset){
+        actions.dragAndDropBy(fourthDraggableElement,xOffset,yOffset).build().perform();
     }
 
 
