@@ -4,7 +4,7 @@ import utils.BrowserUtils;
 
 public class ShowConfirmTest extends Hook {
     @Test
-    public void testShowConfirm() throws InterruptedException {
+    public void testShowConfirm() {
         pages.getHomePage().clickOnWebAutomationLink();
 
         BrowserUtils.keyDown();

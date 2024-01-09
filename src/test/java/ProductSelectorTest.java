@@ -5,7 +5,7 @@ import utils.BrowserUtils;
 
 public class ProductSelectorTest extends Hook {
     @Test
-    void testProductSelector() throws InterruptedException {
+    void testProductSelector() {
         pages.getHomePage().clickOnWebAutomationLink();
         pages.getWebAutomationPage().clickOnCheckBoxRadio();
         pages.getWebAutomationPage().clickOnDProductSelector();

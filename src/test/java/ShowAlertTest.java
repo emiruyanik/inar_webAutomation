@@ -4,7 +4,7 @@ import utils.BrowserUtils;
 
 public class ShowAlertTest extends Hook {
     @Test
-    void testShowAlert() throws InterruptedException {
+    void testShowAlert() {
         pages.getHomePage().clickOnWebAutomationLink();
         BrowserUtils.keyDown();
         BrowserUtils.wait(1);

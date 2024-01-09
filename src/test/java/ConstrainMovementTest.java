@@ -5,7 +5,7 @@ public class ConstrainMovementTest extends Hook {
     SoftAssertions softAssertions = new SoftAssertions();
 
     @Test
-    public void testMovementOfDraggableElements() throws InterruptedException {
+    public void testMovementOfDraggableElements() {
         pages.getHomePage().clickOnWebAutomationLink();
         pages.getWebAutomationPage().clickOnDraggableLink();
         pages.getWebAutomationPage().clickOnConstrainMovementLink();
@@ -72,7 +72,6 @@ public class ConstrainMovementTest extends Hook {
         int finalX4 = pages.getConstrainMovement().fourthElementOfLocationX();
         int finalY4 = pages.getConstrainMovement().fourthElementOfLocationY();
 
-        Thread.sleep(5000);
 
         //verify for third element
 

@@ -1,14 +1,14 @@
 import org.assertj.core.api.Assertions;
 import org.assertj.core.data.Percentage;
 import org.junit.jupiter.api.Test;
-import utils.Driver;
-import utils.Pages;
+import utils.BrowserUtils;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RevertAndDraggablePositionTest extends Hook {
     @Test
-    public void testRevertAndDraggablePosition() throws InterruptedException {
+    public void testRevertAndDraggablePosition() {
         pages.getHomePage().clickOnWebAutomationLink();
         pages.getWebAutomationPage().clickOnDroppableLink();
         pages.getWebAutomationPage().clickRevertDraggable();
@@ -17,7 +17,7 @@ public class RevertAndDraggablePositionTest extends Hook {
         int initY = pages.getRevertAndDraggablePositionLink().locationYOfWebElement1();
         // after drag and drop
         pages.getRevertAndDraggablePositionLink().dragAndDropWebElement1();
-        Thread.sleep(2000);
+        BrowserUtils.wait(2);
         int finalX = pages.getRevertAndDraggablePositionLink().locationXOfWebElement1();
         int finalY = pages.getRevertAndDraggablePositionLink().locationYOfWebElement1();
         //verify
@@ -34,7 +34,7 @@ public class RevertAndDraggablePositionTest extends Hook {
 
         int initX1 = pages.getRevertAndDraggablePositionLink().locationXOfWebElement2();
         int initY1 = pages.getRevertAndDraggablePositionLink().locationYOfWebElement2();
-        Thread.sleep(1000);
+        BrowserUtils.wait(2);
         int finalX1 = pages.getRevertAndDraggablePositionLink().locationXOfWebElement2();
         int finalY1 = pages.getRevertAndDraggablePositionLink().locationYOfWebElement2();
         //verify

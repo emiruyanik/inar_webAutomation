@@ -4,7 +4,7 @@ import utils.BrowserUtils;
 
 public class NormalIframeTest extends Hook {
     @Test
-    void normalIframeTest() throws InterruptedException {
+    void normalIframeTest() {
         pages.getHomePage().clickOnWebAutomationLink();
 
         BrowserUtils.keyDown();

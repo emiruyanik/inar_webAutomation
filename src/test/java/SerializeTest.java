@@ -1,14 +1,11 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import utils.BrowserUtils;
 
-import java.security.Key;
 
 public class SerializeTest extends Hook {
     @Test
-    void testSerialize() throws InterruptedException {
+    void testSerialize() {
         pages.getHomePage().clickOnWebAutomationLink();
         pages.getWebAutomationPage().clickSelectable();
         pages.getWebAutomationPage().clickSerialize();
