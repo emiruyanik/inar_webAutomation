@@ -1,14 +1,23 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.datepicker.SelectDateRange;
+import utils.BrowserUtils;
 
 public class WebAutomationPage extends BasePage {
     @FindBy(linkText = "Draggable")
     private WebElement draggableLink;
+    @FindBy(linkText = "Dialog")
+    private WebElement dialogLink;
     @FindBy(linkText = "Constrain Movement")
     private WebElement constrainMovementLink;
+    @FindBy(linkText = "Control Group")
+    private WebElement controlGroupLink;
+    @FindBy(linkText = "Toolbar")
+    private WebElement toolbarLink;
+
     @FindBy(linkText = "Handles")
     private WebElement handlesLink;
     @FindBy(linkText = "Droppable")
@@ -41,6 +50,38 @@ public class WebAutomationPage extends BasePage {
     private WebElement checkBoxRadioLink;
     @FindBy(linkText = "Product Selector")
     private WebElement productSelectorLink;
+    @FindBy(linkText = "Autocomplete")
+    private WebElement autocompleteLink;
+    @FindBy(linkText = "Multiple & Remote")
+    private WebElement multipleRemoteLink;
+    @FindBy(linkText = "Accent Folding")
+    private WebElement accentFoldingLink;
+    @FindBy(linkText = "Menu")
+    private WebElement menuLink;
+    @FindBy(linkText = "Icons")
+    private WebElement iconsLink;
+    @FindBy(linkText = "Progress Bar")
+    private WebElement progressBarLink;
+    @FindBy(linkText = "Download Dialog")
+    private WebElement downloadDialogLink;
+    @FindBy(linkText = "Modal Confirmation")
+    private WebElement modalConfirmationLink;
+    @FindBy(linkText = "Datepicker")
+    private WebElement datepickerLink;
+    @FindBy(linkText = "Select Date Range")
+    private WebElement selectDateRangeLink;
+    @FindBy(linkText = "Slider")
+    private WebElement sliderLink;
+    @FindBy(linkText = "Snap to increments")
+    private WebElement snapToIncrementsLink;
+    @FindBy(linkText = "Spinner")
+    private WebElement spinnerLink;
+    @FindBy(linkText = "Spinner with longtidute and latitude")
+    private WebElement spinnerWithLALLink;
+    @FindBy(linkText = "Accordion")
+    private WebElement accordionLink;
+    @FindBy(linkText = "Collapse Content")
+    private WebElement collapseContentLink;
 
 
     public WebAutomationPage() {
@@ -49,6 +90,17 @@ public class WebAutomationPage extends BasePage {
 
     public void clickOnDraggableLink() {
         draggableLink.click();
+    }
+
+    public void clickOnDialogLink() {
+        dialogLink.click();
+    }
+
+    public void clickOnModalConfirmationLink() {
+        modalConfirmationLink.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scroll(0,100)");
+        BrowserUtils.wait(1);
     }
 
     public void clickOnConstrainMovementLink() {
@@ -117,6 +169,73 @@ public class WebAutomationPage extends BasePage {
 
     public void clickOnDProductSelector() {
         productSelectorLink.click();
+    }
+
+    public void clickOnAutoComplete() {
+        autocompleteLink.click();
+    }
+
+    public void clickOnMultipleAndRemote() {
+        multipleRemoteLink.click();
+    }
+
+    public void clickOnAccentFoldingLink() {
+        accentFoldingLink.click();
+    }
+
+    public void clickOnProgressBar() {
+        progressBarLink.click();
+    }
+
+    public void clickOnDownloadLink() {
+        downloadDialogLink.click();
+    }
+
+    public void clickOnMenuLink() {
+        menuLink.click();
+    }
+
+    public void clickOnIcons() {
+        iconsLink.click();
+    }
+
+    public void clickOnControlGroup() {
+        controlGroupLink.click();
+    }
+
+    public void clickOnToolBar() {
+        toolbarLink.click();
+    }
+
+    public void clickOnDatePickerLink() {
+        datepickerLink.click();
+    }
+
+    public void clickOnSelectDateRangeLink() {
+        selectDateRangeLink.click();
+    }
+
+    public void clickOnSliderLink() {
+        sliderLink.click();
+    }
+
+    public void clickOnSnapToIncrementsLink() {
+        snapToIncrementsLink.click();
+    }
+
+    public void clickOnSpinnerLink() {
+        spinnerLink.click();
+    }
+
+    public void clickOnSpinnerWithLalLink() {
+        spinnerWithLALLink.click();
+    }
+
+    public void clickOnAccordionLink() {
+        accordionLink.click();
+    }
+    public void clickOnCollapseContent(){
+        collapseContentLink.click();
     }
 
 

@@ -11,11 +11,13 @@ public class BrowserUtils {
     public static void keyDown() {
         actions = new Actions(Driver.getDriver());
         actions.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
+        wait(1);
     }
 
     public static void keyUp() {
         actions = new Actions(Driver.getDriver());
         actions.keyDown(Keys.PAGE_UP).keyUp(Keys.PAGE_UP).build().perform();
+        wait(1);
     }
 
     public static void wait(int second) {
